@@ -16,11 +16,12 @@ form {
 
 .todo-input-field {
     font-family: 'Alegreya', serif;
+    font-size: large;
     border: 1px solid black;
     border-radius: 12px;
     text-align: center;
    
-    width: 280px;
+    width: 300px;
 }
 
 

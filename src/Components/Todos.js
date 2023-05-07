@@ -19,8 +19,8 @@ export default function Todos(props) {
         <div className="container sizing"> 
             <img src={image} alt="lazy" width="270px" height="270px"/>
             <form onSubmit={onAdd}>
-                <input type="text" className="mb-2 todo-input-field" ref={todo_title} placeholder="TODO" maxLength={60}></input>
-                <button type="submit" className="btn btn-sm btn-primary mx-3 mb-3">Add</button>
+                <input type="text" className="mb-2 todo-input-field p-1" ref={todo_title} placeholder="TODO" maxLength={60}></input>
+                <button type="submit" className="btn btn btn-primary p mb-3">Add</button>
             </form>
             {
                 props.todos.length === 0 ? <p> Nothing to do... Take a break! </p> :
