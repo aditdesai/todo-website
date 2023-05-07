@@ -1,0 +1,39 @@
+.sizing {
+    width: 30%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-input-field {
+    font-family: 'Alegreya', serif;
+    border: 1px solid black;
+    border-radius: 12px;
+    text-align: center;
+   
+    width: 280px;
+}
+
+
+
+#todo-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item {
+    flex-grow: 1;
+    text-align: center;
+}
