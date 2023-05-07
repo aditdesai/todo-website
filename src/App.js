@@ -30,7 +30,7 @@ export default function App() {
     //in react
     setTodos(todos.filter((ele) => ele !== todo))
 
-    localStorage.setItem("todos", JSON.stringify(todos));
+    //localStorage.setItem("todos", JSON.stringify(todos));
   }
 
   function add(todo) {
@@ -43,11 +43,12 @@ export default function App() {
     //thus, we use useEffect hook
   }
 
+  
   return ( //this is jsx, not html
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Todos todos={todos} del={del} add={add} />} ></Route>
+        <Route path="/" element={<Todos todos={todos} del={del} add={add}/>} ></Route>
         <Route path="/about" element={<About />} > </Route>
       </Routes>
     </BrowserRouter>

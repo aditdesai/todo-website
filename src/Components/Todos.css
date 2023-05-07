@@ -29,12 +29,5 @@ form {
 #todo-list {
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.todo-item {
-    flex-grow: 1;
-    text-align: center;
+    justify-content: center;
 }

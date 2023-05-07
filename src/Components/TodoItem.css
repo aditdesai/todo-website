@@ -1,12 +1,16 @@
-.todo-item {
+
+.todo {
     font-family: 'Lato', sans-serif;
     font-style: italic;
     font-weight: 300;
     background-color: #05368b;
     color: aliceblue;
-    border-radius: 10px;
+    border-radius: 15px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-.todo-item:hover {
+
+.todo:hover {
     cursor: pointer;
 }

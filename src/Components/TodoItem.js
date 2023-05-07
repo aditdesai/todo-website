@@ -1,14 +1,19 @@
 import './TodoItem.css';
-//import {useEffect} from 'react';
+
 
 export const TodoItem = (props) => {
     // useEffect - function passed runs after a render is commited to screen
     // [] - when render FIRST commited to screen
     
+    function handleDoubleClick()
+    {
+        props.del(props.todo);
+    }
 
-    return (
-        
-            <div className="fs-5 todo-item my-2 px-3" onClick={() => { props.del(props.todo) }}>{props.todo["title"]}</div>
+    return (  
+        <div className="todo my-2 mx-1 fs-5 py-2 px-3" onDoubleClick={handleDoubleClick}>
+            {props.todo["title"]}
+        </div>     
     )
 
     /*
