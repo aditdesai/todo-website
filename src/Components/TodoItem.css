@@ -10,6 +10,13 @@
     flex-grow: 1;
 }
 
+.todo-pending {
+    text-decoration: none;
+}
+
+.todo-done {
+    text-decoration: line-through;
+}
 
 .todo:hover {
     cursor: pointer;
