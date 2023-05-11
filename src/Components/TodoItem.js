@@ -7,20 +7,26 @@ export const TodoItem = (props) => {
 
     const [style, setStyle] = useState(props.todo["isPending"] ? "todo-pending" : "todo-done");
     const [anim, setAnim] = useState(false);
+    let dblclick = false;
 
     function handleClick(event) {
+        
 
-        if (event.detail === 1) {
-            props.setPendingState(props.todo);
-            setStyle(style === "todo-pending" ? "todo-done" : "todo-pending");
-        }
+        setTimeout(() => {
+            if (event.detail === 1 && !dblclick) {
+                props.setPendingState(props.todo);
+                setStyle(style === "todo-pending" ? "todo-done" : "todo-pending");
+                dblclick = false;
+            }
+        }, 200);
 
         if (event.detail === 2) {
+            dblclick = true;
             setAnim(true);
 
             setTimeout(() => {
                 props.del(props.todo);
-            }, 250);
+            }, 210);
         }
     }
 
