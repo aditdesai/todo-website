@@ -28,7 +28,7 @@ export default function Todos(props) {
                 <div id="todo-list">
                 {
                     props.todos.map((todo, i)=> {
-                        return <TodoItem key={todo.sno} todo={todo} del={props.del}/>
+                        return <TodoItem key={todo.sno} todo={todo} del={props.del} setPendingState={props.setPendingState}/>
                     }) // have to use key when using jsx inside map()
                 }
                 </div>

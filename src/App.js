@@ -39,8 +39,17 @@ export default function App() {
 
     const next_sno = todos.length === 0 ? 1 : todos[todos.length - 1].sno + 1;
 
-    setTodos([...todos, { sno: next_sno, title: todo }]); // may not immediately change todos, hence, next line may not work
+    setTodos([...todos, { sno: next_sno, title: todo, isPending: true }]); // may not immediately change todos, hence, next line may not work
     //thus, we use useEffect hook
+  }
+
+  function setPendingState(todo)
+  {
+    setTodos(todos.map((ele) => {
+      if (ele === todo)
+        ele.isPending = !ele.isPending;
+      return ele;
+    }))
   }
 
   
@@ -48,7 +57,7 @@ export default function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Todos todos={todos} del={del} add={add}/>} ></Route>
+        <Route path="/" element={<Todos todos={todos} del={del} add={add} setPendingState={setPendingState}/>} ></Route>
         <Route path="/about" element={<About />} > </Route>
       </Routes>
     </BrowserRouter>
