@@ -18,7 +18,7 @@ export const TodoItem = (props) => {
                 setStyle(style === "todo-pending" ? "todo-done" : "todo-pending");
                 dblclick = false;
             }
-        }, 200);
+        }, 250);
 
         if (event.detail === 2) {
             dblclick = true;
