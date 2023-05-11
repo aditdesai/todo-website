@@ -20,7 +20,7 @@ export const TodoItem = (props) => {
 
             setTimeout(() => {
                 props.del(props.todo);
-            }, 300);
+            }, 250);
         }
     }
 

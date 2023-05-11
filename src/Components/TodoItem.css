@@ -8,7 +8,7 @@
     border-radius: 15px;
     text-align: center;
     flex-grow: 1;
-    animation: add forwards 0.2s ease-out 1;
+    animation: add forwards 0.25s ease-in 1;
 }
 
 .todo-pending {
